@@ -13,7 +13,6 @@ const thefuckingoptions = {
 		reconnect: true
 	},
 	identity: {
-		username: 'theeSparkBot', // Bot Username
 		password: fku.token
 	},
 	channels: [ joinchnl ]

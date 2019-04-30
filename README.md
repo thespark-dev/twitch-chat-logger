@@ -10,4 +10,7 @@ This runs on Node.js (obviously). Please download at https://nodejs.org/en/downl
 <br>
 Then install the packages by opening a cmd and typing `npm i`
 <br>
-After the install run by typing `node app.js`
+You then need to configure the `app.js` and `config.json`. Change the `var joinchnl = ''` in `app.js` to your channelname.
+and the `"token": "oauth:something4w89f4we89f4"` to your token from https://twitchapps.com/tmi
+<br>
+After the install and configuration run by typing `node app.js`

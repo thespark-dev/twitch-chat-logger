@@ -53,6 +53,16 @@ client.on('chat', (channel,user,message,self) => {
 client.on('action', (channel,user,message,self) => {
 	let sender = user['display-name'];
 
+	var time = () => {
+		var d = new Date();
+
+		var datetext = d.toTimeString();
+
+		datetext = datetext.split(' ')[0];
+
+		return datetext;
+	}
+	
 	if (sender.toLowerCase().includes("bot")) {
 		stream.write(`${time()} - * [BOT] ${sender} | ${message}\n`);
 	}

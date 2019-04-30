@@ -66,6 +66,6 @@ client.on('action', (channel,user,message,self) => {
 })
 
 client.on('timeout', (channel, username, reason, duration, user) =>{
-	stream.write(`${time()} - [TIMEOUT] ${user["target-user-id"]} timeouted af ${username} i ${duration} sekunder.`);
+	stream.write(`${time()} - [TIMEOUT] ${user["target-user-id"]} timeouted by ${username} for ${duration} seconds.`);
 })
 /* LOGGER */

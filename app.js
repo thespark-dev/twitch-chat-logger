@@ -40,10 +40,10 @@ client.on('chat', (channel,user,message,self) => {
 
 	if (sender.toLowerCase().includes("bot")) {
 		stream.write(`${time()} - [BOT] ${sender} | ${message}\n`);
-	}
-
-	else if (sender.toLowerCase() == "theespark" || sender.toLowerCase() == joinchnl) {
+	} else if (sender.toLowerCase() == "theespark" || sender.toLowerCase() == joinchnl) {
 		stream.write(`${time()} - [KING] ${sender} | ${message}\n`);
+	} else if (user.mod) {
+		stream.write(`${time()} - [MOD] ${sender} | ${message}\n`);
 	} else {
 		stream.write(`${time()} - ${sender} | ${message}\n`);
 	}
@@ -65,10 +65,10 @@ client.on('action', (channel,user,message,self) => {
 	
 	if (sender.toLowerCase().includes("bot")) {
 		stream.write(`${time()} - * [BOT] ${sender} | ${message}\n`);
-	}
-
-	else if (sender.toLowerCase() == "theespark" || sender.toLowerCase() == joinchnl) {
+	} else if (sender.toLowerCase() == "theespark" || sender.toLowerCase() == joinchnl) {
 		stream.write(`${time()} - * [KING] ${sender} | ${message}\n`);
+	} else if (user.mod) {
+		stream.write(`${time()} - * [MOD] ${sender} | ${message}\n`);
 	} else {
 		stream.write(`${time()} - * ${sender} | ${message}\n`);
 	}

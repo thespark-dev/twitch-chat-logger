@@ -2,7 +2,7 @@ const tfapi = require('tmi.js');
 const fku = require('./config.json');
 const fs = require('fs');
 
-var joinchnl = '';
+var joinchnl = fku.channel;
 
 const thefuckingoptions = {
 	options: {
